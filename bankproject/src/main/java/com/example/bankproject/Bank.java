@@ -20,7 +20,7 @@ public class Bank {
 
 	@Column(name = "branch_code")
 	private int branchCode;
-	
+
 	public Bank() {
 	}
 
