@@ -21,7 +21,7 @@ public class BankController {
 	private BankRepository bankRepository;
 
 	@GetMapping("/banks")
-	public Page<Bank> getAllPosts(Pageable pageable) {
+	public Page<Bank> getAllBanks(Pageable pageable) {
 		return bankRepository.findAll(pageable);
 	}
 

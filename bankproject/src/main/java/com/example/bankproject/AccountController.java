@@ -24,7 +24,7 @@ public class AccountController {
 	private BankRepository bankRepository;
 
 	@GetMapping("/banks/{bankId}/accounts")
-	public Page<Account> getAllCommentsByBankId(@PathVariable(value = "bankId") Long bankId, Pageable pageable) {
+	public Page<Account> getAllAccountsByBankId(@PathVariable(value = "bankId") Long bankId, Pageable pageable) {
 		return accountRepository.findByBankId(bankId, pageable);
 	}
 
