@@ -8,6 +8,9 @@ public class BankprojectApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BankprojectApplication.class, args);
+		
+		CurrentAccount ca = new CurrentAccount();
+		
 	}
 
 }

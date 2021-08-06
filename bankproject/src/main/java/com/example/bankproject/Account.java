@@ -21,13 +21,13 @@ public class Account {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	protected Long id;
 
 	@Column(name = "account_number")
-	private int accountNumber;
+	protected int accountNumber;
 
 	@Column(name = "value")
-	private float value;
+	protected float value;
 
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "branch_code", nullable = false)

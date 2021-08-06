@@ -43,7 +43,7 @@ public class AccountController {
 			throw new ResourceNotFoundException("BankId " + bankId + " not found");
 		}
 
-		return accountRepository.findById(accountId).map(account -> {
+		return accountRepository.findByIdAndBankId(accountId, bankId).map(account -> {
 			account.setValue(accountRequest.getValue());
 			return accountRepository.save(account);
 		}).orElseThrow(() -> new ResourceNotFoundException("AccountId " + accountId + "not found"));
